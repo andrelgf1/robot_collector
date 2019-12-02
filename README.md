@@ -39,8 +39,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 https://drive.google.com/file/d/1VDC9aNsyO4hMGFzV3Twza4A3Bski4WT-/view?usp=sharing
 
-
 ## Review of Iteration 1 Plan
+
+https://docs.google.com/document/d/1ZHgUjypmwQ1EgH6OiEfFr33gEY65AFu5PCSwR1Sbxzo/edit?usp=sharing
+
+
+## Review of Iteration 2 Plan
+
+https://docs.google.com/document/d/1que-h1hVN6aHw7FYaeQJNNPZvcynl0JTlDxtLWUCvBE/edit?usp=sharing
+
+
+
 
 
 
