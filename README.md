@@ -1,5 +1,7 @@
 # Project WICKMAN - ROBOT COLLECTOR for ACME Robotics
 
+[![Build Status](https://travis-ci.org/sanhuezapablo/robot_collector.svg?branch=master)](https://travis-ci.org/sanhuezapablo/robot_collector)
+[![Coverage Status](https://coveralls.io/repos/github/sanhuezapablo/robot_collector/badge.svg?branch=master)](https://coveralls.io/github/sanhuezapablo/robot_collector?branch=master)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ---
 
@@ -37,8 +39,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 https://drive.google.com/file/d/1VDC9aNsyO4hMGFzV3Twza4A3Bski4WT-/view?usp=sharing
 
-
 ## Review of Iteration 1 Plan
+
+https://docs.google.com/document/d/1ZHgUjypmwQ1EgH6OiEfFr33gEY65AFu5PCSwR1Sbxzo/edit?usp=sharing
+
+
+## Review of Iteration 2 Plan
+
+https://docs.google.com/document/d/1que-h1hVN6aHw7FYaeQJNNPZvcynl0JTlDxtLWUCvBE/edit?usp=sharing
+
+
+
 
 
 

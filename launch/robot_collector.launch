@@ -1,0 +1,26 @@
+<launch>
+  <!-- World with Turtlebot -->
+  <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+    <arg name="world_file" value="$(find robot_collector)/World/map_new"/>
+  </include>
+
+  <!-- Robot Collector Node -->
+  <node name="robot_collector" pkg="robot_collector" type="main" output="screen" />
+
+  <!-- AMCL + Move_Base -->
+  <include file="$(find turtlebot_gazebo)/launch/amcl_demo.launch">
+    <arg name="map_file" value="$(find robot_collector)/World/my_map.yaml" />
+    <arg name="initial_pose_x" value="4.0" />
+  </include>
+
+  <!-- AR Track Alvar -->
+	<arg name="marker_size" default="14.7" />
+	<arg name="max_new_marker_error" default="1.0" />
+	<arg name="max_track_error" default="0.02" />
+
+	<arg name="cam_image_topic" default="/camera/depth/points" />
+	<arg name="cam_info_topic" default="/camera/depth/camera_info" />		
+	<arg name="output_frame" default="/map" />
+
+	<node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkers" respawn="false" output="screen" args="$(arg marker_size) $(arg max_new_marker_error) $(arg max_track_error) $(arg cam_image_topic) $(arg cam_info_topic) $(arg output_frame)" />
+</launch>
