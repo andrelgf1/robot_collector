@@ -61,9 +61,12 @@ TEST(ModelHandlingTest, testGetModel) {
 
   /// Making sure the request sets correct parameters
   EXPECT_EQ(testModel.request.model_name, model.request.model_name);
-  EXPECT_EQ(testModel.request.initial_pose.position.x, model.request.initial_pose.position.x);
-  EXPECT_EQ(testModel.request.initial_pose.position.y, model.request.initial_pose.position.y);
-  EXPECT_EQ(testModel.request.initial_pose.position.z, model.request.initial_pose.position.z);
+  EXPECT_EQ(testModel.request.initial_pose.position.x,
+    model.request.initial_pose.position.x);
+  EXPECT_EQ(testModel.request.initial_pose.position.y,
+    model.request.initial_pose.position.y);
+  EXPECT_EQ(testModel.request.initial_pose.position.z,
+    model.request.initial_pose.position.z);
   EXPECT_EQ(testModel.request.reference_frame, model.request.reference_frame);
 }
 
@@ -87,7 +90,7 @@ TEST(ModelHandlingTest, testGetDeleteMsg) {
   /// modelHandling object
   modelHandling handling;
 
-  /// Call getDeleteMsg, which is a pair of response and request to delete a model
+  /// Call getDeleteMsg, pair of response and request to delete a model
   std::pair <gazebo_msgs::DeleteModelRequest, gazebo_msgs::DeleteModelResponse>
     msgPair = handling.getDeleteMsg("1");
 
