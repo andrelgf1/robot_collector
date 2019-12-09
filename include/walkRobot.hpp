@@ -8,8 +8,8 @@
  * @author Pablo Sanhueza, Ryan Cunningham, Andre Gomes
  * @copyright 2019 Pablo Sanhueza, Ryan Cunningham, Andre Gomes
  */
-#ifndef INCLUDE_WALK_ROBOT_WALKROBOT_HPP_
-#define INCLUDE_WALK_ROBOT_WALKROBOT_HPP_
+#ifndef INCLUDE_WALKROBOT_HPP_
+#define INCLUDE_WALKROBOT_HPP_
 
 #include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
@@ -53,4 +53,4 @@ class walkRobot {
   geometry_msgs::Twist robotWalk();
 };
 
-#endif  // INCLUDE_WALK_ROBOT_WALKROBOT_HPP_"
+#endif  // INCLUDE_WALKROBOT_HPP_"
