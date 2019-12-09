@@ -1,6 +1,6 @@
 /**
- * @file detector.hpp
- * @brief Detects the closest AR tag.
+ * @file detector_ros.hpp
+ * @brief ROS wrapper for he DetectorRos class.
  * @author Pablo Sanhueza
  * @author Ryan Cunningham
  * @author Andre Gomes
@@ -8,8 +8,8 @@
  *
  */
 
-#ifndef INCLUDE_DETECTOR_HPP_
-#define INCLUDE_DETECTOR_HPP_
+#ifndef INCLUDE_DETECTOR_ROS_HPP_
+#define INCLUDE_DETECTOR_ROS_HPP_
 
 #include <ros/ros.h>
 #include <ar_track_alvar_msgs/AlvarMarkers.h>
@@ -18,17 +18,19 @@
 #include <string>
 #include <vector>
 
+#include "detector.hpp"
+
 /**
  * @brief Detects AR tags.
  */
-class Detector {
+class DetectorRos {
  public:
   /**
    * @brief Initialize Detector object.
    * @param validMarkerIds valid marker ids to detect
    * @return none
    */
-  explicit Detector(const std::vector<std::string>& validMarkerIds);
+  explicit DetectorRos(const std::vector<std::string>& validMarkerIds);
   /**
    * @brief Detect markers.
    * @param msg markers message
@@ -47,17 +49,14 @@ class Detector {
    * @return the closest marker
    */
   ar_track_alvar_msgs::AlvarMarker getClosestMarker();
-  /**
-   * @brief Check if a marker id is valid.
-   * @param markerId the marker id to check
-   * @return true is marker is valid, false otherwise
-   */
-  bool isMarkerIdValid(const std::string& markerId);
+
  private:
-  /// valid marker ids
-  std::vector<std::string> validMarkerIds;
-  /// detected markers
-  std::vector<ar_track_alvar_msgs::AlvarMarker> markers;
+  /// node handle for subscribing
+  ros::NodeHandle nh;
+  /// subscription to the ar_pose_marker topic
+  ros::Subscriber arTrackSub;
+  /// marker detector
+  Detector detector;
 };
 
-#endif // INCLUDE_DETECTOR_HPP_
+#endif // INCLUDE_DETECTOR_ROS_HPP_
