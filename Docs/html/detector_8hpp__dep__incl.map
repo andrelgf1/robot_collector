@@ -1,0 +1,7 @@
+<map id="include/detector.hpp" name="include/detector.hpp">
+<area shape="rect" id="node2" href="$detector_8cpp.html" title="Detects the closest AR tag. " alt="" coords="5,80,121,107"/>
+<area shape="rect" id="node3" href="$detector__test_8cpp.html" title="Unit Test for Detector class. " alt="" coords="146,80,295,107"/>
+<area shape="rect" id="node4" href="$detector__ros_8hpp.html" title="ROS wrapper for he DetectorRos class. " alt="" coords="320,80,484,107"/>
+<area shape="rect" id="node5" href="$detector__ros_8cpp.html" title="ROS wrapper for the DetectorRos class. " alt="" coords="239,155,381,181"/>
+<area shape="rect" id="node6" href="$detector__ros__test_8cpp.html" title="Unit Test for DetectorRos class. " alt="" coords="405,155,580,181"/>
+</map>
