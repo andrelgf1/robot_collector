@@ -21,6 +21,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <utility>
 #include "ros/package.h"
 #include "randCoord.hpp"
 #include "modelHandling.hpp"
@@ -46,7 +47,7 @@ class modelHandlingRos {
   /**
    * @brief Constructor for ROSmodelHandling
    */
-  explicit modelHandlingRos(const std::string rosPackage);
+  explicit modelHandlingRos(const std::string &rosPackage);
 
   /**
    * @brief Adds models to Gazebo world
@@ -56,14 +57,14 @@ class modelHandlingRos {
    * @param zPos z position of model
    * @return none
    */  
-  void addModels(const std::string id, float xPos, float yPos, float zPos);
+  void addModels(const std::string &id, float xPos, float yPos, float zPos);
 
   /**
    * @brief Removes blocks from Gazebo world
    * @param id Tag id as a string
    * @return none
    */  
-  void removeModels(const std::string id);
+  void removeModels(const std::string &id);
 
   /**
    * @brief Adds Models randomly in a defined Gazebo world
@@ -75,14 +76,14 @@ class modelHandlingRos {
    */  
   void randModels(std::vector<std::string> modelNames, float width,
     float length, std::vector<float> centerPoint);
-  
+
   /**
    * @brief Getter for Spawn ServiceClient
    * @param none
    * @return ros::ServiceClient
    */
   ros::ServiceClient getSpawnClient();
-  
+
   /**
    * @brief Getter for Delete ServiceClient
    * @param none
@@ -110,7 +111,7 @@ class modelHandlingRos {
    * @param id Tag id as a string
    * @return none
    */  
-  void modelPath(std::string id);
+  void modelPath(std::string &id);
 
   /**
    * @brief Call back method for ModelStates Topic
