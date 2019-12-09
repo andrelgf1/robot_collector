@@ -1,0 +1,104 @@
+\hypertarget{classwalkRobotRos}{}\section{walk\+Robot\+Ros Class Reference}
+\label{classwalkRobotRos}\index{walk\+Robot\+Ros@{walk\+Robot\+Ros}}
+
+
+Collaboration diagram for walk\+Robot\+Ros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{classwalkRobotRos__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwalkRobotRos_a642a5690f6c6edfcd6f0470cc59e1197}{walk\+Robot\+Ros} ()
+\begin{DoxyCompactList}\small\item\em constructor of the \hyperlink{classwalkRobotRos}{walk\+Robot\+Ros} class \end{DoxyCompactList}\item 
+void \hyperlink{classwalkRobotRos_ae8eb0d47c19b806f46f0bb6e50060de8}{laser\+Sensor\+Callback} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&)
+\begin{DoxyCompactList}\small\item\em Sensor callback function in order to subscribe in the laser sensor topic and set the atribute obstacle in order to inform the presence or not of obstacles. \end{DoxyCompactList}\item 
+void \hyperlink{classwalkRobotRos_a5fc8da4343df09e338068740bdf72b8a}{robot\+Walk\+Ros} ()
+\begin{DoxyCompactList}\small\item\em Publishes msg to robot velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwalkRobot}{walk\+Robot} \hyperlink{classwalkRobotRos_a52ace3b6f3d549d863de2e36faab3a46}{walk}\hypertarget{classwalkRobotRos_a52ace3b6f3d549d863de2e36faab3a46}{}\label{classwalkRobotRos_a52ace3b6f3d549d863de2e36faab3a46}
+
+\begin{DoxyCompactList}\small\item\em Object of walk robot class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{walk\+Robot\+Ros@{walk\+Robot\+Ros}!walk\+Robot\+Ros@{walk\+Robot\+Ros}}
+\index{walk\+Robot\+Ros@{walk\+Robot\+Ros}!walk\+Robot\+Ros@{walk\+Robot\+Ros}}
+\subsubsection[{\texorpdfstring{walk\+Robot\+Ros()}{walkRobotRos()}}]{\setlength{\rightskip}{0pt plus 5cm}walk\+Robot\+Ros\+::walk\+Robot\+Ros (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classwalkRobotRos_a642a5690f6c6edfcd6f0470cc59e1197}{}\label{classwalkRobotRos_a642a5690f6c6edfcd6f0470cc59e1197}
+
+
+constructor of the \hyperlink{classwalkRobotRos}{walk\+Robot\+Ros} class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Sensor data
+
+Advertise Velocity
+
+seeding random number generator 
+
+\subsection{Member Function Documentation}
+\index{walk\+Robot\+Ros@{walk\+Robot\+Ros}!laser\+Sensor\+Callback@{laser\+Sensor\+Callback}}
+\index{laser\+Sensor\+Callback@{laser\+Sensor\+Callback}!walk\+Robot\+Ros@{walk\+Robot\+Ros}}
+\subsubsection[{\texorpdfstring{laser\+Sensor\+Callback(const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&)}{laserSensorCallback(const sensor_msgs::LaserScan::ConstPtr &)}}]{\setlength{\rightskip}{0pt plus 5cm}void walk\+Robot\+Ros\+::laser\+Sensor\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&}]{obs\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classwalkRobotRos_ae8eb0d47c19b806f46f0bb6e50060de8}{}\label{classwalkRobotRos_ae8eb0d47c19b806f46f0bb6e50060de8}
+
+
+Sensor callback function in order to subscribe in the laser sensor topic and set the atribute obstacle in order to inform the presence or not of obstacles. 
+
+Callback method that receives laser Scan information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+send laser scan message method of robotwalk class \index{walk\+Robot\+Ros@{walk\+Robot\+Ros}!robot\+Walk\+Ros@{robot\+Walk\+Ros}}
+\index{robot\+Walk\+Ros@{robot\+Walk\+Ros}!walk\+Robot\+Ros@{walk\+Robot\+Ros}}
+\subsubsection[{\texorpdfstring{robot\+Walk\+Ros()}{robotWalkRos()}}]{\setlength{\rightskip}{0pt plus 5cm}void walk\+Robot\+Ros\+::robot\+Walk\+Ros (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classwalkRobotRos_a5fc8da4343df09e338068740bdf72b8a}{}\label{classwalkRobotRos_a5fc8da4343df09e338068740bdf72b8a}
+
+
+Publishes msg to robot velocity. 
+
+Pusblishes msg to velocity of robot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{walkRobotRos_8hpp}{walk\+Robot\+Ros.\+hpp}\item 
+src/\hyperlink{walkRobotRos_8cpp}{walk\+Robot\+Ros.\+cpp}\end{DoxyCompactItemize}

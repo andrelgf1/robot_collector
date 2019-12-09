@@ -1,0 +1,118 @@
+\hypertarget{walkRobotRos__test_8cpp}{}\section{test/walk\+Robot\+Ros\+\_\+test.cpp File Reference}
+\label{walkRobotRos__test_8cpp}\index{test/walk\+Robot\+Ros\+\_\+test.\+cpp@{test/walk\+Robot\+Ros\+\_\+test.\+cpp}}
+
+
+Source code for the implementation of \hyperlink{classwalkRobotRos}{walk\+Robot\+Ros} tests.  
+
+
+{\ttfamily \#include \char`\"{}walk\+Robot\+Ros.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Laser\+Scan.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Twist.\+h$>$}\\*
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+Include dependency graph for walk\+Robot\+Ros\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{walkRobotRos__test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTestSubHelper}{Test\+Sub\+Helper}
+\begin{DoxyCompactList}\small\item\em Struct to count the callback function was called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{walkRobotRos__test_8cpp_ab43be7d8ed68d1ced5a0cd174ae5a949}{T\+E\+ST} (walk\+Robot\+Ros\+Test, Test\+Laser\+Sensor\+Callback)
+\begin{DoxyCompactList}\small\item\em Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. \end{DoxyCompactList}\item 
+\hyperlink{walkRobotRos__test_8cpp_acc41388b081ff9dbd332ad19698be076}{T\+E\+ST} (walk\+Robot\+Ros\+Test, Test\+Walk\+Robot\+Ros)
+\begin{DoxyCompactList}\small\item\em Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Source code for the implementation of \hyperlink{classwalkRobotRos}{walk\+Robot\+Ros} tests. 
+
+/$\ast$ This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.\+0. If a copy of the M\+PL was not distributed with this file, You can obtain one at \href{https://mozilla.org/MPL/2.0/}{\tt https\+://mozilla.\+org/\+M\+P\+L/2.\+0/}.
+
+\begin{DoxyAuthor}{Author}
+Pablo Sanhueza, Ryan Cunningham, Andre Gomes 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+2019 Pablo Sanhueza, Ryan Cunningham, Andre Gomes 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{walk\+Robot\+Ros\+\_\+test.\+cpp@{walk\+Robot\+Ros\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!walk\+Robot\+Ros\+\_\+test.\+cpp@{walk\+Robot\+Ros\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(walk\+Robot\+Ros\+Test, Test\+Laser\+Sensor\+Callback)}{TEST(walkRobotRosTest, TestLaserSensorCallback)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{walk\+Robot\+Ros\+Test}]{, }
+\item[{Test\+Laser\+Sensor\+Callback}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{walkRobotRos__test_8cpp_ab43be7d8ed68d1ced5a0cd174ae5a949}{}\label{walkRobotRos__test_8cpp_ab43be7d8ed68d1ced5a0cd174ae5a949}
+
+
+Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em walk\+Robot\+Ros\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em Test\+Laser\+Sensor\+Callback} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+nodehandle R\+OS
+
+Generating publisher to topic /scan
+
+Generating a laser mensage to be published at topic /scan
+
+Setting the values og ranges to 0.\+1 to be detected as obstacle
+
+Create object of class \hyperlink{classwalkRobotRos}{walk\+Robot\+Ros}
+
+loop Rate
+
+publish test
+
+Break loop after 11 iterations to generate new random value
+
+Test if obstacle was detected \index{walk\+Robot\+Ros\+\_\+test.\+cpp@{walk\+Robot\+Ros\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!walk\+Robot\+Ros\+\_\+test.\+cpp@{walk\+Robot\+Ros\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(walk\+Robot\+Ros\+Test, Test\+Walk\+Robot\+Ros)}{TEST(walkRobotRosTest, TestWalkRobotRos)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{walk\+Robot\+Ros\+Test}]{, }
+\item[{Test\+Walk\+Robot\+Ros}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{walkRobotRos__test_8cpp_acc41388b081ff9dbd332ad19698be076}{}\label{walkRobotRos__test_8cpp_acc41388b081ff9dbd332ad19698be076}
+
+
+Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em walk\+Robot\+Ros\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em Test\+Walk\+Robot\+Ros} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Initilize instance of a struct
+
+Create object of class \hyperlink{classwalkRobotRos}{walk\+Robot\+Ros}
+
+nodehandle R\+OS
+
+Generating a velocity subscriber
+
+publish test 

@@ -1,0 +1,167 @@
+\hypertarget{walkRobot__test_8cpp}{}\section{test/walk\+Robot\+\_\+test.cpp File Reference}
+\label{walkRobot__test_8cpp}\index{test/walk\+Robot\+\_\+test.\+cpp@{test/walk\+Robot\+\_\+test.\+cpp}}
+
+
+Source code for the implementation of \hyperlink{classwalkRobot}{walk\+Robot} class.  
+
+
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Laser\+Scan.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Twist.\+h$>$}\\*
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}walk\+Robot\+Ros.\+hpp\char`\"{}}\\*
+Include dependency graph for walk\+Robot\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{walkRobot__test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{walkRobot__test_8cpp_a272d5f1681a60881885351ac427fa530}{T\+E\+ST} (walk\+Robot\+Test, Test\+Obstacle\+Found)
+\begin{DoxyCompactList}\small\item\em Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. \end{DoxyCompactList}\item 
+\hyperlink{walkRobot__test_8cpp_afc06f3d1ffdda6bf23309b642857ab6e}{T\+E\+ST} (walk\+Robot\+Test, Test\+Linear\+Velocity)
+\begin{DoxyCompactList}\small\item\em Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. \end{DoxyCompactList}\item 
+\hyperlink{walkRobot__test_8cpp_a76fb2796dc5b8ae434675db4dda99ee5}{T\+E\+ST} (walk\+Robot\+Test, Test\+Positive\+Angular\+Velocity)
+\begin{DoxyCompactList}\small\item\em Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. \end{DoxyCompactList}\item 
+\hyperlink{walkRobot__test_8cpp_ad45bd6ce9747a7a9d75ca3bea931ff63}{T\+E\+ST} (walk\+Robot\+Test, Test\+Negative\+Angular\+Velocity)
+\begin{DoxyCompactList}\small\item\em Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Source code for the implementation of \hyperlink{classwalkRobot}{walk\+Robot} class. 
+
+/$\ast$ This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.\+0. If a copy of the M\+PL was not distributed with this file, You can obtain one at \href{https://mozilla.org/MPL/2.0/}{\tt https\+://mozilla.\+org/\+M\+P\+L/2.\+0/}.
+
+\begin{DoxyAuthor}{Author}
+Pablo Sanhueza, Ryan Cunningham, Andre Gomes 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+2019 Pablo Sanhueza, Ryan Cunningham, Andre Gomes 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{walk\+Robot\+\_\+test.\+cpp@{walk\+Robot\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!walk\+Robot\+\_\+test.\+cpp@{walk\+Robot\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(walk\+Robot\+Test, Test\+Obstacle\+Found)}{TEST(walkRobotTest, TestObstacleFound)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{walk\+Robot\+Test}]{, }
+\item[{Test\+Obstacle\+Found}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{walkRobot__test_8cpp_a272d5f1681a60881885351ac427fa530}{}\label{walkRobot__test_8cpp_a272d5f1681a60881885351ac427fa530}
+
+
+Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em walk\+Robot\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em Test\+Obstacle\+Found} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Creating Object of \hyperlink{classwalkRobot}{walk\+Robot}
+
+setting obstacle equal true
+
+Calling method from \hyperlink{classwalkRobot}{walk\+Robot}
+
+Expected linear velocity to avoid obstacle \index{walk\+Robot\+\_\+test.\+cpp@{walk\+Robot\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!walk\+Robot\+\_\+test.\+cpp@{walk\+Robot\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(walk\+Robot\+Test, Test\+Linear\+Velocity)}{TEST(walkRobotTest, TestLinearVelocity)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{walk\+Robot\+Test}]{, }
+\item[{Test\+Linear\+Velocity}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{walkRobot__test_8cpp_afc06f3d1ffdda6bf23309b642857ab6e}{}\label{walkRobot__test_8cpp_afc06f3d1ffdda6bf23309b642857ab6e}
+
+
+Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em walk\+Robot\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em Test\+Linear\+Velocity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Creating Object of \hyperlink{classwalkRobot}{walk\+Robot}
+
+setting obstacle equal false
+
+setting linear velocity
+
+Calling method from \hyperlink{classwalkRobot}{walk\+Robot}
+
+Expect linear velocity equal 1 \index{walk\+Robot\+\_\+test.\+cpp@{walk\+Robot\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!walk\+Robot\+\_\+test.\+cpp@{walk\+Robot\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(walk\+Robot\+Test, Test\+Positive\+Angular\+Velocity)}{TEST(walkRobotTest, TestPositiveAngularVelocity)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{walk\+Robot\+Test}]{, }
+\item[{Test\+Positive\+Angular\+Velocity}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{walkRobot__test_8cpp_a76fb2796dc5b8ae434675db4dda99ee5}{}\label{walkRobot__test_8cpp_a76fb2796dc5b8ae434675db4dda99ee5}
+
+
+Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em walk\+Robot\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em Test\+Positive\+Angular\+Velocity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Creating Object of \hyperlink{classwalkRobot}{walk\+Robot}
+
+setting obstacle equal false
+
+setting action to positive velocity
+
+Calling method from \hyperlink{classwalkRobot}{walk\+Robot}
+
+Expect linear velocity equal 0.\+5 \index{walk\+Robot\+\_\+test.\+cpp@{walk\+Robot\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!walk\+Robot\+\_\+test.\+cpp@{walk\+Robot\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(walk\+Robot\+Test, Test\+Negative\+Angular\+Velocity)}{TEST(walkRobotTest, TestNegativeAngularVelocity)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{walk\+Robot\+Test}]{, }
+\item[{Test\+Negative\+Angular\+Velocity}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{walkRobot__test_8cpp_ad45bd6ce9747a7a9d75ca3bea931ff63}{}\label{walkRobot__test_8cpp_ad45bd6ce9747a7a9d75ca3bea931ff63}
+
+
+Test remove\+Models() of \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em walk\+Robot\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em Test\+Negative\+Angular\+Velocity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Creating Object of \hyperlink{classwalkRobot}{walk\+Robot}
+
+setting obstacle equal false
+
+setting action to negative velocity
+
+Calling method from \hyperlink{classwalkRobot}{walk\+Robot}
+
+Expect linear velocity equal -\/0.\+5 

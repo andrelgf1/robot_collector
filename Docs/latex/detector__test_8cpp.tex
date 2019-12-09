@@ -1,0 +1,151 @@
+\hypertarget{detector__test_8cpp}{}\section{test/detector\+\_\+test.cpp File Reference}
+\label{detector__test_8cpp}\index{test/detector\+\_\+test.\+cpp@{test/detector\+\_\+test.\+cpp}}
+
+
+Unit Test for \hyperlink{classDetector}{Detector} class.  
+
+
+{\ttfamily \#include \char`\"{}detector.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+Include dependency graph for detector\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{detector__test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{detector__test_8cpp_a7ced4cdbeca7d328c60d4be9a11ca49e}{T\+E\+ST} (Detector\+Test, test\+No\+Detected\+Markers)
+\begin{DoxyCompactList}\small\item\em Test that no markers are detected from a message with no markers. \end{DoxyCompactList}\item 
+\hyperlink{detector__test_8cpp_a97193669ca5887d5df9b9b5211c87d69}{T\+E\+ST} (Detector\+Test, test\+Detected\+Markers)
+\begin{DoxyCompactList}\small\item\em Test that markers are detected from a message that contains markers. \end{DoxyCompactList}\item 
+\hyperlink{detector__test_8cpp_a46128500d8604c71485b7cec202e1ad0}{T\+E\+ST} (Detector\+Test, test\+Is\+Closer\+Than)
+\begin{DoxyCompactList}\small\item\em Test that the detector returns the closest of multiple markers. \end{DoxyCompactList}\item 
+\hyperlink{detector__test_8cpp_afcc02acf15925a46cec1a7bc4223eb52}{T\+E\+ST} (Detector\+Test, test\+Is\+Marker\+Id\+Valid)
+\begin{DoxyCompactList}\small\item\em Test that a marker id is in the list of valid marker ids. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unit Test for \hyperlink{classDetector}{Detector} class. 
+
+This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.\+0. If a copy of the M\+PL was not distributed with this file, You can obtain one at \href{https://mozilla.org/MPL/2.0/}{\tt https\+://mozilla.\+org/\+M\+P\+L/2.\+0/}.
+
+\begin{DoxyAuthor}{Author}
+Pablo Sanhueza, Ryan Cunningham, Andre Gomes 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{detector\+\_\+test.\+cpp@{detector\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!detector\+\_\+test.\+cpp@{detector\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Detector\+Test, test\+No\+Detected\+Markers)}{TEST(DetectorTest, testNoDetectedMarkers)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Detector\+Test}]{, }
+\item[{test\+No\+Detected\+Markers}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{detector__test_8cpp_a7ced4cdbeca7d328c60d4be9a11ca49e}{}\label{detector__test_8cpp_a7ced4cdbeca7d328c60d4be9a11ca49e}
+
+
+Test that no markers are detected from a message with no markers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Detector\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+No\+Detected\+Markers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+create a message with no markers
+
+verify no markers are detected \index{detector\+\_\+test.\+cpp@{detector\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!detector\+\_\+test.\+cpp@{detector\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Detector\+Test, test\+Detected\+Markers)}{TEST(DetectorTest, testDetectedMarkers)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Detector\+Test}]{, }
+\item[{test\+Detected\+Markers}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{detector__test_8cpp_a97193669ca5887d5df9b9b5211c87d69}{}\label{detector__test_8cpp_a97193669ca5887d5df9b9b5211c87d69}
+
+
+Test that markers are detected from a message that contains markers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Detector\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+Detected\+Markers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+create a message with 1 marker
+
+create the marker message
+
+verify the marker is detected \index{detector\+\_\+test.\+cpp@{detector\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!detector\+\_\+test.\+cpp@{detector\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Detector\+Test, test\+Is\+Closer\+Than)}{TEST(DetectorTest, testIsCloserThan)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Detector\+Test}]{, }
+\item[{test\+Is\+Closer\+Than}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{detector__test_8cpp_a46128500d8604c71485b7cec202e1ad0}{}\label{detector__test_8cpp_a46128500d8604c71485b7cec202e1ad0}
+
+
+Test that the detector returns the closest of multiple markers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Detector\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+Is\+Closer\+Than} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+create a message with two markers
+
+the first message will be further away from the robot
+
+the second message will be closer to the robot
+
+verify that the markers are detected
+
+verify that the correct marker is the closest \index{detector\+\_\+test.\+cpp@{detector\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!detector\+\_\+test.\+cpp@{detector\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Detector\+Test, test\+Is\+Marker\+Id\+Valid)}{TEST(DetectorTest, testIsMarkerIdValid)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Detector\+Test}]{, }
+\item[{test\+Is\+Marker\+Id\+Valid}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{detector__test_8cpp_afcc02acf15925a46cec1a7bc4223eb52}{}\label{detector__test_8cpp_afcc02acf15925a46cec1a7bc4223eb52}
+
+
+Test that a marker id is in the list of valid marker ids. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Detector\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+Is\+Marker\+Id\+Valid} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+create valid marker ids
+
+verify that an id in the list of valid ids is valid
+
+verify that an id not in the list of valid ids is invalid 

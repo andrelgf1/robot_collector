@@ -1,0 +1,95 @@
+\hypertarget{classmodelHandling}{}\section{model\+Handling Class Reference}
+\label{classmodelHandling}\index{model\+Handling@{model\+Handling}}
+
+
+Class for sending messages to add or delete models.  
+
+
+
+
+{\ttfamily \#include $<$model\+Handling.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodelHandling_aa11bfe4b63bbaac07c55df878f37a806}{model\+Handling} ()\hypertarget{classmodelHandling_aa11bfe4b63bbaac07c55df878f37a806}{}\label{classmodelHandling_aa11bfe4b63bbaac07c55df878f37a806}
+
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classmodelHandling}{model\+Handling}. \end{DoxyCompactList}\item 
+gazebo\+\_\+msgs\+::\+Spawn\+Model \hyperlink{classmodelHandling_af5bbb6d4c89bf8569d9de533525c7e75}{get\+Model} (std\+::string path, const std\+::string \&id, float x\+Pos, float y\+Pos, float z\+Pos)
+\begin{DoxyCompactList}\small\item\em Method returns msg with model info. \end{DoxyCompactList}\item 
+std\+::pair$<$ gazebo\+\_\+msgs\+::\+Delete\+Model\+Request, gazebo\+\_\+msgs\+::\+Delete\+Model\+Response $>$ \hyperlink{classmodelHandling_a7e1c0736c2934ab2826b32c4917d2997}{get\+Delete\+Msg} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Method returns a pair of gazebo\+\_\+msgs for deleting a model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for sending messages to add or delete models. 
+
+\subsection{Member Function Documentation}
+\index{model\+Handling@{model\+Handling}!get\+Delete\+Msg@{get\+Delete\+Msg}}
+\index{get\+Delete\+Msg@{get\+Delete\+Msg}!model\+Handling@{model\+Handling}}
+\subsubsection[{\texorpdfstring{get\+Delete\+Msg(const std\+::string \&id)}{getDeleteMsg(const std::string &id)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ gazebo\+\_\+msgs\+::\+Delete\+Model\+Request, gazebo\+\_\+msgs\+::\+Delete\+Model\+Response $>$ model\+Handling\+::get\+Delete\+Msg (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classmodelHandling_a7e1c0736c2934ab2826b32c4917d2997}{}\label{classmodelHandling_a7e1c0736c2934ab2826b32c4917d2997}
+
+
+Method returns a pair of gazebo\+\_\+msgs for deleting a model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Tag id as a string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::pair $<$gazebo\+\_\+msgs\+::\+Delete\+Model\+Request, gazebo\+\_\+msgs\+::\+Delete\+Model\+Response$>$ returns a pair of gazebo\+\_\+msgs to delete model 
+\end{DoxyReturn}
+Name of model to be deleted
+
+Declaring gazebo\+\_\+msgs to delete model
+
+Creating a pair for msgs above, to be given to R\+O\+Smodel\+Handling \index{model\+Handling@{model\+Handling}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!model\+Handling@{model\+Handling}}
+\subsubsection[{\texorpdfstring{get\+Model(std\+::string path, const std\+::string \&id, float x\+Pos, float y\+Pos, float z\+Pos)}{getModel(std::string path, const std::string &id, float xPos, float yPos, float zPos)}}]{\setlength{\rightskip}{0pt plus 5cm}gazebo\+\_\+msgs\+::\+Spawn\+Model model\+Handling\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path, }
+\item[{const std\+::string \&}]{id, }
+\item[{float}]{x\+Pos, }
+\item[{float}]{y\+Pos, }
+\item[{float}]{z\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classmodelHandling_af5bbb6d4c89bf8569d9de533525c7e75}{}\label{classmodelHandling_af5bbb6d4c89bf8569d9de533525c7e75}
+
+
+Method returns msg with model info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to model file \\
+\hline
+{\em id} & Tag id \\
+\hline
+{\em x\+Pos} & x position of model \\
+\hline
+{\em y\+Pos} & y position of model \\
+\hline
+{\em z\+Pos} & z position of model \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+gazebo\+\_\+msgs\+::\+Spawn\+Model returns a message of type Spawn\+Model 
+\end{DoxyReturn}
+Name of model
+
+Declaring gazebo\+\_\+msgs
+
+Retriving file
+
+Giving xml lines of file to model
+
+Setting necessary information to succesfully add model 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model\+Handling.\+hpp\item 
+src/model\+Handling.\+cpp\end{DoxyCompactItemize}

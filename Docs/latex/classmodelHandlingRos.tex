@@ -1,0 +1,202 @@
+\hypertarget{classmodelHandlingRos}{}\section{model\+Handling\+Ros Class Reference}
+\label{classmodelHandlingRos}\index{model\+Handling\+Ros@{model\+Handling\+Ros}}
+
+
+Class for adding models into a Gazebo world.  
+
+
+
+
+{\ttfamily \#include $<$model\+Handling\+Ros.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodelHandlingRos_afbacc3a052c5e0e1be563ab53d9736d4}{model\+Handling\+Ros} (const std\+::string \&ros\+Package)
+\begin{DoxyCompactList}\small\item\em Constructor for R\+O\+Smodel\+Handling. \end{DoxyCompactList}\item 
+void \hyperlink{classmodelHandlingRos_ad8e5f372e54d598d9be2c19656292fe9}{add\+Models} (const std\+::string \&id, float x\+Pos, float y\+Pos, float z\+Pos)
+\begin{DoxyCompactList}\small\item\em Adds models to Gazebo world. \end{DoxyCompactList}\item 
+void \hyperlink{classmodelHandlingRos_a6fe4e2adf9d1a226888f2858f2641163}{remove\+Models} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Removes blocks from Gazebo world. \end{DoxyCompactList}\item 
+void \hyperlink{classmodelHandlingRos_aedbe976dfa2d5fede923966d70425a14}{rand\+Models} (std\+::vector$<$ std\+::string $>$ model\+Names, float width, float length, std\+::vector$<$ float $>$ center\+Point)
+\begin{DoxyCompactList}\small\item\em Adds Models randomly in a defined Gazebo world. \end{DoxyCompactList}\item 
+ros\+::\+Service\+Client \hyperlink{classmodelHandlingRos_a8312b68f0278e960517d83e4d6109834}{get\+Spawn\+Client} ()
+\begin{DoxyCompactList}\small\item\em Getter for Spawn Service\+Client. \end{DoxyCompactList}\item 
+ros\+::\+Service\+Client \hyperlink{classmodelHandlingRos_aabcafdeb6314ef9241a09a9739caf22a}{get\+Delete\+Client} ()
+\begin{DoxyCompactList}\small\item\em Getter for Delete Service\+Client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classmodelHandlingRos_a6e67e7a319582e5a1c4cd7692b51f3ce}{ros\+Package\+\_\+}\hypertarget{classmodelHandlingRos_a6e67e7a319582e5a1c4cd7692b51f3ce}{}\label{classmodelHandlingRos_a6e67e7a319582e5a1c4cd7692b51f3ce}
+
+\begin{DoxyCompactList}\small\item\em R\+OS Package of where the models to be added. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classmodelHandlingRos_a50d257e7e2686168994f8e1c2186288e}{path}\hypertarget{classmodelHandlingRos_a50d257e7e2686168994f8e1c2186288e}{}\label{classmodelHandlingRos_a50d257e7e2686168994f8e1c2186288e}
+
+\begin{DoxyCompactList}\small\item\em Path to where to sdf model. \end{DoxyCompactList}\item 
+gazebo\+\_\+msgs\+::\+Spawn\+Model \hyperlink{classmodelHandlingRos_a569eb064c364681c2b3e19d5830e792b}{model}\hypertarget{classmodelHandlingRos_a569eb064c364681c2b3e19d5830e792b}{}\label{classmodelHandlingRos_a569eb064c364681c2b3e19d5830e792b}
+
+\begin{DoxyCompactList}\small\item\em Gazebo Msg Model. \end{DoxyCompactList}\item 
+std\+::pair$<$ gazebo\+\_\+msgs\+::\+Delete\+Model\+Request, gazebo\+\_\+msgs\+::\+Delete\+Model\+Response $>$ \hyperlink{classmodelHandlingRos_a6891536ab9f61f19a3115a99b6a1062d}{delete\+Msg}\hypertarget{classmodelHandlingRos_a6891536ab9f61f19a3115a99b6a1062d}{}\label{classmodelHandlingRos_a6891536ab9f61f19a3115a99b6a1062d}
+
+\begin{DoxyCompactList}\small\item\em Pair of Delete Model msgs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for adding models into a Gazebo world. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{model\+Handling\+Ros@{model\+Handling\+Ros}!model\+Handling\+Ros@{model\+Handling\+Ros}}
+\index{model\+Handling\+Ros@{model\+Handling\+Ros}!model\+Handling\+Ros@{model\+Handling\+Ros}}
+\subsubsection[{\texorpdfstring{model\+Handling\+Ros(const std\+::string \&ros\+Package)}{modelHandlingRos(const std::string &rosPackage)}}]{\setlength{\rightskip}{0pt plus 5cm}model\+Handling\+Ros\+::model\+Handling\+Ros (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{ros\+Package}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classmodelHandlingRos_afbacc3a052c5e0e1be563ab53d9736d4}{}\label{classmodelHandlingRos_afbacc3a052c5e0e1be563ab53d9736d4}
+
+
+Constructor for R\+O\+Smodel\+Handling. 
+
+Constructor for \hyperlink{classmodelHandlingRos}{model\+Handling\+Ros}. Service from gazebo\+\_\+ros to spawn sdf models
+
+Service from gazebo\+\_\+ros to delete models from gazebo world
+
+Subscribe to gazebo/model\+\_\+states 
+
+\subsection{Member Function Documentation}
+\index{model\+Handling\+Ros@{model\+Handling\+Ros}!add\+Models@{add\+Models}}
+\index{add\+Models@{add\+Models}!model\+Handling\+Ros@{model\+Handling\+Ros}}
+\subsubsection[{\texorpdfstring{add\+Models(const std\+::string \&id, float x\+Pos, float y\+Pos, float z\+Pos)}{addModels(const std::string &id, float xPos, float yPos, float zPos)}}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Handling\+Ros\+::add\+Models (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{id, }
+\item[{float}]{x\+Pos, }
+\item[{float}]{y\+Pos, }
+\item[{float}]{z\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classmodelHandlingRos_ad8e5f372e54d598d9be2c19656292fe9}{}\label{classmodelHandlingRos_ad8e5f372e54d598d9be2c19656292fe9}
+
+
+Adds models to Gazebo world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Tag id \\
+\hline
+{\em x\+Pos} & x position of model \\
+\hline
+{\em y\+Pos} & y position of model \\
+\hline
+{\em z\+Pos} & z position of model \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Call the service to add model \index{model\+Handling\+Ros@{model\+Handling\+Ros}!get\+Delete\+Client@{get\+Delete\+Client}}
+\index{get\+Delete\+Client@{get\+Delete\+Client}!model\+Handling\+Ros@{model\+Handling\+Ros}}
+\subsubsection[{\texorpdfstring{get\+Delete\+Client()}{getDeleteClient()}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Client model\+Handling\+Ros\+::get\+Delete\+Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmodelHandlingRos_aabcafdeb6314ef9241a09a9739caf22a}{}\label{classmodelHandlingRos_aabcafdeb6314ef9241a09a9739caf22a}
+
+
+Getter for Delete Service\+Client. 
+
+Getter for Delete Client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ros\+::\+Service\+Client 
+\end{DoxyReturn}
+\index{model\+Handling\+Ros@{model\+Handling\+Ros}!get\+Spawn\+Client@{get\+Spawn\+Client}}
+\index{get\+Spawn\+Client@{get\+Spawn\+Client}!model\+Handling\+Ros@{model\+Handling\+Ros}}
+\subsubsection[{\texorpdfstring{get\+Spawn\+Client()}{getSpawnClient()}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Client model\+Handling\+Ros\+::get\+Spawn\+Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmodelHandlingRos_a8312b68f0278e960517d83e4d6109834}{}\label{classmodelHandlingRos_a8312b68f0278e960517d83e4d6109834}
+
+
+Getter for Spawn Service\+Client. 
+
+Getter for Spawn Client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ros\+::\+Service\+Client 
+\end{DoxyReturn}
+\index{model\+Handling\+Ros@{model\+Handling\+Ros}!rand\+Models@{rand\+Models}}
+\index{rand\+Models@{rand\+Models}!model\+Handling\+Ros@{model\+Handling\+Ros}}
+\subsubsection[{\texorpdfstring{rand\+Models(std\+::vector$<$ std\+::string $>$ model\+Names, float width, float length, std\+::vector$<$ float $>$ center\+Point)}{randModels(std::vector< std::string > modelNames, float width, float length, std::vector< float > centerPoint)}}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Handling\+Ros\+::rand\+Models (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{model\+Names, }
+\item[{float}]{width, }
+\item[{float}]{length, }
+\item[{std\+::vector$<$ float $>$}]{center\+Point}
+\end{DoxyParamCaption}
+)}\hypertarget{classmodelHandlingRos_aedbe976dfa2d5fede923966d70425a14}{}\label{classmodelHandlingRos_aedbe976dfa2d5fede923966d70425a14}
+
+
+Adds Models randomly in a defined Gazebo world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Names} & vector of model names as strings \\
+\hline
+{\em width} & Width of the Gazebo world \\
+\hline
+{\em height} & Height of Gazebo world \\
+\hline
+{\em world\+Mid\+Point} & Center of Gazebo world \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Initializing \hyperlink{classrandCoord}{rand\+Coord} object
+
+Declaring variables for x and y rand coords
+
+Constant z
+
+Make sure that Model States msgs are active
+
+Checking if random coords are close to other models in map
+
+Adding model \index{model\+Handling\+Ros@{model\+Handling\+Ros}!remove\+Models@{remove\+Models}}
+\index{remove\+Models@{remove\+Models}!model\+Handling\+Ros@{model\+Handling\+Ros}}
+\subsubsection[{\texorpdfstring{remove\+Models(const std\+::string \&id)}{removeModels(const std::string &id)}}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Handling\+Ros\+::remove\+Models (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classmodelHandlingRos_a6fe4e2adf9d1a226888f2858f2641163}{}\label{classmodelHandlingRos_a6fe4e2adf9d1a226888f2858f2641163}
+
+
+Removes blocks from Gazebo world. 
+
+Removes models from Gazebo world.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Tag id as a string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Retrivieng gazebo\+\_\+msgs necessary to delete model
+
+Calling the service to delete model 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model\+Handling\+Ros.\+hpp\item 
+src/model\+Handling\+Ros.\+cpp\end{DoxyCompactItemize}

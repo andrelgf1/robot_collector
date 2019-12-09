@@ -1,0 +1,65 @@
+./src/detector.cpp:18:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/detector.cpp:34:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/detector.cpp:36:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/detector.cpp:38:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/detector.cpp:41:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/detector.cpp:59:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./src/detector.cpp
+./src/collector_ros.cpp:22:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/collector_ros.cpp:30:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/collector_ros.cpp:36:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./src/collector_ros.cpp
+Done processing ./src/modelHandlingRos.cpp
+Done processing ./src/modelHandling.cpp
+./src/walkRobot.cpp:36:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/walkRobot.cpp:54:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/walkRobot.cpp:56:  Consider using rand_r(...) instead of rand(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
+./src/walkRobot.cpp:57:  Consider using rand_r(...) instead of rand(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
+./src/walkRobot.cpp:59:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./src/walkRobot.cpp
+Done processing ./src/main.cpp
+Done processing ./src/randCoord.cpp
+./src/collector.cpp:22:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/collector.cpp:24:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/collector.cpp:35:  Closing ) should be moved to the previous line  [whitespace/parens] [2]
+./src/collector.cpp:52:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./src/collector.cpp
+Done processing ./src/walkRobotRos.cpp
+./src/detector_ros.cpp:18:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./src/detector_ros.cpp
+Done processing ./test/walkRobot_test.cpp
+Done processing ./test/main.cpp
+Done processing ./test/modelHandling_test.cpp
+./test/detector_ros_test.cpp:28:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./test/detector_ros_test.cpp:62:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./test/detector_ros_test.cpp:106:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./test/detector_ros_test.cpp
+Done processing ./test/modelHandlingRos_test.cpp
+./test/walkRobotRos_test.cpp:42:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./test/walkRobotRos_test.cpp:101:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./test/walkRobotRos_test.cpp:117:  Consider using EXPECT_LT instead of EXPECT_TRUE(a < b)  [readability/check] [2]
+Done processing ./test/walkRobotRos_test.cpp
+Done processing ./test/detector_test.cpp
+./test/collector_test.cpp:27:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./test/collector_test.cpp
+Done processing ./test/randCoord_test.cpp
+./include/collector.hpp:38:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./include/collector.hpp:46:  "private:" should be preceded by a blank line  [whitespace/blank_line] [3]
+./include/collector.hpp:51:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+Done processing ./include/collector.hpp
+Done processing ./include/walkRobotRos.hpp
+./include/collector_ros.hpp:47:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+Done processing ./include/collector_ros.hpp
+./include/detector.hpp:56:  "private:" should be preceded by a blank line  [whitespace/blank_line] [3]
+./include/detector.hpp:63:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+Done processing ./include/detector.hpp
+./include/walkRobot.hpp:21:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./include/walkRobot.hpp
+./include/modelHandlingRos.hpp:114:  Is this a non-const reference? If so, make const or use a pointer: std::string &id  [runtime/references] [2]
+Done processing ./include/modelHandlingRos.hpp
+Done processing ./include/randCoord.hpp
+./include/detector_ros.hpp:62:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+Done processing ./include/detector_ros.hpp
+Done processing ./include/modelHandling.hpp
+Total errors found: 35
+

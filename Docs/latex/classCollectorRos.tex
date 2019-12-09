@@ -1,0 +1,62 @@
+\hypertarget{classCollectorRos}{}\section{Collector\+Ros Class Reference}
+\label{classCollectorRos}\index{Collector\+Ros@{Collector\+Ros}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCollectorRos_a9432a3c28078e39fb9fa4b3a2af27813}{Collector\+Ros} (const std\+::string \&frame\+Id, double collection\+Range)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classCollectorRos}{Collector\+Ros} object. \end{DoxyCompactList}\item 
+bool \hyperlink{classCollectorRos_a5c829fd8f87c18c579aee8daa93e4515}{collect} (const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker \&marker)
+\begin{DoxyCompactList}\small\item\em Navigates to the marker to collect it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Collector\+Ros@{Collector\+Ros}!Collector\+Ros@{Collector\+Ros}}
+\index{Collector\+Ros@{Collector\+Ros}!Collector\+Ros@{Collector\+Ros}}
+\subsubsection[{\texorpdfstring{Collector\+Ros(const std\+::string \&frame\+Id, double collection\+Range)}{CollectorRos(const std::string &frameId, double collectionRange)}}]{\setlength{\rightskip}{0pt plus 5cm}Collector\+Ros\+::\+Collector\+Ros (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{frame\+Id, }
+\item[{double}]{collection\+Range}
+\end{DoxyParamCaption}
+)}\hypertarget{classCollectorRos_a9432a3c28078e39fb9fa4b3a2af27813}{}\label{classCollectorRos_a9432a3c28078e39fb9fa4b3a2af27813}
+
+
+Initializes the \hyperlink{classCollectorRos}{Collector\+Ros} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collection\+Range} & the range to the robot to collect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Collector\+Ros@{Collector\+Ros}!collect@{collect}}
+\index{collect@{collect}!Collector\+Ros@{Collector\+Ros}}
+\subsubsection[{\texorpdfstring{collect(const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker \&marker)}{collect(const ar_track_alvar_msgs::AlvarMarker &marker)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Collector\+Ros\+::collect (
+\begin{DoxyParamCaption}
+\item[{const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker \&}]{marker}
+\end{DoxyParamCaption}
+)}\hypertarget{classCollectorRos_a5c829fd8f87c18c579aee8daa93e4515}{}\label{classCollectorRos_a5c829fd8f87c18c579aee8daa93e4515}
+
+
+Navigates to the marker to collect it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & the marker to collect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the marker is reached, false otherwise 
+\end{DoxyReturn}
+get the move base goal
+
+send the goal and wait for the robot to move 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{collector__ros_8hpp}{collector\+\_\+ros.\+hpp}\item 
+src/\hyperlink{collector__ros_8cpp}{collector\+\_\+ros.\+cpp}\end{DoxyCompactItemize}

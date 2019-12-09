@@ -1,0 +1,102 @@
+\hypertarget{classCollector}{}\section{Collector Class Reference}
+\label{classCollector}\index{Collector@{Collector}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCollector_a3e1790ed3cd1a4e154d48f0eaea36b71}{Collector} (double collection\+Range)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classCollector}{Collector} object. \end{DoxyCompactList}\item 
+move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Goal \hyperlink{classCollector_a2dbde6be007c3efed06212487af7a882}{create\+Move\+Base\+Goal} (const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker \&marker, const std\+::string \&frame\+Id)
+\begin{DoxyCompactList}\small\item\em Creates a move base goal message. \end{DoxyCompactList}\item 
+std\+::pair$<$ double, double $>$ \hyperlink{classCollector_aaabd16e180a9d88d493f0d882aa97d99}{translate\+Point\+To\+Origin} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Translates a point to the origin by collection\+Range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Collector@{Collector}!Collector@{Collector}}
+\index{Collector@{Collector}!Collector@{Collector}}
+\subsubsection[{\texorpdfstring{Collector(double collection\+Range)}{Collector(double collectionRange)}}]{\setlength{\rightskip}{0pt plus 5cm}Collector\+::\+Collector (
+\begin{DoxyParamCaption}
+\item[{double}]{collection\+Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classCollector_a3e1790ed3cd1a4e154d48f0eaea36b71}{}\label{classCollector_a3e1790ed3cd1a4e154d48f0eaea36b71}
+
+
+Initializes the \hyperlink{classCollector}{Collector} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collection\+Range} & the range to the robot to collect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Collector@{Collector}!create\+Move\+Base\+Goal@{create\+Move\+Base\+Goal}}
+\index{create\+Move\+Base\+Goal@{create\+Move\+Base\+Goal}!Collector@{Collector}}
+\subsubsection[{\texorpdfstring{create\+Move\+Base\+Goal(const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker \&marker, const std\+::string \&frame\+Id)}{createMoveBaseGoal(const ar_track_alvar_msgs::AlvarMarker &marker, const std::string &frameId)}}]{\setlength{\rightskip}{0pt plus 5cm}move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Goal Collector\+::create\+Move\+Base\+Goal (
+\begin{DoxyParamCaption}
+\item[{const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker \&}]{marker, }
+\item[{const std\+::string \&}]{frame\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classCollector_a2dbde6be007c3efed06212487af7a882}{}\label{classCollector_a2dbde6be007c3efed06212487af7a882}
+
+
+Creates a move base goal message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & the marker to set as the goal \\
+\hline
+{\em frame\+Id} & the coordinate frame to set the position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+goal message 
+\end{DoxyReturn}
+create the goal
+
+set the frame id and time
+
+get the translated point
+
+set the position
+
+set the orientation
+
+return the goal \index{Collector@{Collector}!translate\+Point\+To\+Origin@{translate\+Point\+To\+Origin}}
+\index{translate\+Point\+To\+Origin@{translate\+Point\+To\+Origin}!Collector@{Collector}}
+\subsubsection[{\texorpdfstring{translate\+Point\+To\+Origin(double x, double y)}{translatePointToOrigin(double x, double y)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ double, double $>$ Collector\+::translate\+Point\+To\+Origin (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classCollector_aaabd16e180a9d88d493f0d882aa97d99}{}\label{classCollector_aaabd16e180a9d88d493f0d882aa97d99}
+
+
+Translates a point to the origin by collection\+Range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the point x value \\
+\hline
+{\em y} & the point y value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the translated point 
+\end{DoxyReturn}
+get the distance from the robot
+
+get the angle from the robot
+
+get the x and y points collection\+Range away from the robot
+
+return the new point 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{collector_8hpp}{collector.\+hpp}\item 
+src/\hyperlink{collector_8cpp}{collector.\+cpp}\end{DoxyCompactItemize}
