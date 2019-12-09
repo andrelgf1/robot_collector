@@ -8,8 +8,8 @@
  * @author Pablo Sanhueza, Ryan Cunningham, Andre Gomes
  * @copyright 2019 Pablo Sanhueza, Ryan Cunningham, Andre Gomes
  */
-#ifndef INCLUDE_WALK_ROBOT_WALKROBOTROS_HPP_
-#define INCLUDE_WALK_ROBOT_WALKROBOTROS_HPP_
+#ifndef INCLUDE_WALKROBOTROS_HPP_
+#define INCLUDE_WALKROBOTROS_HPP_
 
 #include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
@@ -56,4 +56,4 @@ class walkRobotRos {
   void robotWalkRos();
 };
 
-#endif  // INCLUDE_WALK_ROBOT_WALKROBOTROS_HPP_"
+#endif  // INCLUDE_WALKROBOTROS_HPP_"
