@@ -1,0 +1,116 @@
+\hypertarget{classwalkRobot}{}\section{walk\+Robot Class Reference}
+\label{classwalkRobot}\index{walk\+Robot@{walk\+Robot}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwalkRobot_a1fa0365ac086c66276b1624a0f2a1da1}{walk\+Robot} ()
+\begin{DoxyCompactList}\small\item\em constructor of the \hyperlink{classwalkRobot}{walk\+Robot} class \end{DoxyCompactList}\item 
+void \hyperlink{classwalkRobot_a9c9fca551eaf03f0e88fff9b06c41a5b}{laser\+Sensor\+Callback} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&scan\+Msg)
+\begin{DoxyCompactList}\small\item\em Sensor callback function in order to subscribe in the laser sensor topic. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Twist \hyperlink{classwalkRobot_a004b0b6a1dc1946d645aa260dfa3ad5c}{robot\+Walk} ()
+\begin{DoxyCompactList}\small\item\em Method to define robot speed in order to move Ramdomly while avoidind collision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classwalkRobot_abfa76975f72ce51e6c0bfb4d059e1b9d}{obstacle}\hypertarget{classwalkRobot_abfa76975f72ce51e6c0bfb4d059e1b9d}{}\label{classwalkRobot_abfa76975f72ce51e6c0bfb4d059e1b9d}
+
+\begin{DoxyCompactList}\small\item\em obstacle variable that handles the presence of an obstacle \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Twist \hyperlink{classwalkRobot_aa3516f6c31d4bea99a0cb2251c64c93e}{msg}\hypertarget{classwalkRobot_aa3516f6c31d4bea99a0cb2251c64c93e}{}\label{classwalkRobot_aa3516f6c31d4bea99a0cb2251c64c93e}
+
+\begin{DoxyCompactList}\small\item\em msg variable that handles robot velicities \end{DoxyCompactList}\item 
+int \hyperlink{classwalkRobot_a6645360ed6dfc115bdf28e42564f1af8}{action}\hypertarget{classwalkRobot_a6645360ed6dfc115bdf28e42564f1af8}{}\label{classwalkRobot_a6645360ed6dfc115bdf28e42564f1af8}
+
+\begin{DoxyCompactList}\small\item\em action variable to enable what action should be performed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{walk\+Robot@{walk\+Robot}!walk\+Robot@{walk\+Robot}}
+\index{walk\+Robot@{walk\+Robot}!walk\+Robot@{walk\+Robot}}
+\subsubsection[{\texorpdfstring{walk\+Robot()}{walkRobot()}}]{\setlength{\rightskip}{0pt plus 5cm}walk\+Robot\+::walk\+Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classwalkRobot_a1fa0365ac086c66276b1624a0f2a1da1}{}\label{classwalkRobot_a1fa0365ac086c66276b1624a0f2a1da1}
+
+
+constructor of the \hyperlink{classwalkRobot}{walk\+Robot} class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Initializing obstacle variable to false
+
+Initializing number\+Of\+Times\+Published variable to 0
+
+Initializing action variable to 0 
+
+\subsection{Member Function Documentation}
+\index{walk\+Robot@{walk\+Robot}!laser\+Sensor\+Callback@{laser\+Sensor\+Callback}}
+\index{laser\+Sensor\+Callback@{laser\+Sensor\+Callback}!walk\+Robot@{walk\+Robot}}
+\subsubsection[{\texorpdfstring{laser\+Sensor\+Callback(const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&scan\+Msg)}{laserSensorCallback(const sensor_msgs::LaserScan::ConstPtr &scanMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}void walk\+Robot\+::laser\+Sensor\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&}]{scan\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classwalkRobot_a9c9fca551eaf03f0e88fff9b06c41a5b}{}\label{classwalkRobot_a9c9fca551eaf03f0e88fff9b06c41a5b}
+
+
+Sensor callback function in order to subscribe in the laser sensor topic. 
+
+Method that calls back Laser\+Scan.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+\_\+msgs\+::\+Laser\+Scan} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+checking if laser found any obstacle
+
+if no obstacle was found set obstacle to false \index{walk\+Robot@{walk\+Robot}!robot\+Walk@{robot\+Walk}}
+\index{robot\+Walk@{robot\+Walk}!walk\+Robot@{walk\+Robot}}
+\subsubsection[{\texorpdfstring{robot\+Walk()}{robotWalk()}}]{\setlength{\rightskip}{0pt plus 5cm}geometry\+\_\+msgs\+::\+Twist walk\+Robot\+::robot\+Walk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classwalkRobot_a004b0b6a1dc1946d645aa260dfa3ad5c}{}\label{classwalkRobot_a004b0b6a1dc1946d645aa260dfa3ad5c}
+
+
+Method to define robot speed in order to move Ramdomly while avoidind collision. 
+
+Method that moves robot randomly while avoiding obstacles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+geometry\+\_\+msgs , In order to make the robot move 
+\end{DoxyReturn}
+check obstacle variable in order to ser the velocity
+
+Generarate a random number to variables that controls the number of times the velocity published and which action shoul be done
+
+Define the velocity that should be appiled based on the random variable information
+
+if the robot detects an obstacle set angular velocity
+
+Make sure the robot does not have any linear velocity
+
+Increment the number of obstacles only if the flag equal true
+
+Incrementing variable number\+Of\+Times\+Published
+
+Calling Function to publish the velocity 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{walkRobot_8hpp}{walk\+Robot.\+hpp}\item 
+src/\hyperlink{walkRobot_8cpp}{walk\+Robot.\+cpp}\end{DoxyCompactItemize}

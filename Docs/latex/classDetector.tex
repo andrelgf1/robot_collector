@@ -1,0 +1,142 @@
+\hypertarget{classDetector}{}\section{Detector Class Reference}
+\label{classDetector}\index{Detector@{Detector}}
+
+
+Detects AR tags.  
+
+
+
+
+{\ttfamily \#include $<$detector.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDetector_a1d1e06ac51d880ece1d969a95e9e5a32}{Detector} (const std\+::vector$<$ std\+::string $>$ \&valid\+Marker\+Ids)
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDetector_a791c31687afbd137621a546a921b952f}{detect} (const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Markers \&msg)
+\begin{DoxyCompactList}\small\item\em Detect markers. \end{DoxyCompactList}\item 
+bool \hyperlink{classDetector_a7e42251ac89d61349dc82568d4f05256}{is\+Marker\+Detected} ()
+\begin{DoxyCompactList}\small\item\em Check whether a marker has been detected. \end{DoxyCompactList}\item 
+ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker \hyperlink{classDetector_aaed77ff14ca621807e84f276bd388b58}{get\+Closest\+Marker} ()
+\begin{DoxyCompactList}\small\item\em Get the marker closest to the robot. \end{DoxyCompactList}\item 
+bool \hyperlink{classDetector_a47abbf054591d3b8213136892594cf7b}{is\+Marker\+Id\+Valid} (const std\+::string \&marker\+Id)
+\begin{DoxyCompactList}\small\item\em Check if a marker id is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Detects AR tags. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Detector@{Detector}!Detector@{Detector}}
+\index{Detector@{Detector}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{Detector(const std\+::vector$<$ std\+::string $>$ \&valid\+Marker\+Ids)}{Detector(const std::vector< std::string > &validMarkerIds)}}]{\setlength{\rightskip}{0pt plus 5cm}Detector\+::\+Detector (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{valid\+Marker\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classDetector_a1d1e06ac51d880ece1d969a95e9e5a32}{}\label{classDetector_a1d1e06ac51d880ece1d969a95e9e5a32}
+
+
+Initialize \hyperlink{classDetector}{Detector} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valid\+Marker\+Ids} & valid marker ids to detect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Detector@{Detector}!detect@{detect}}
+\index{detect@{detect}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{detect(const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Markers \&msg)}{detect(const ar_track_alvar_msgs::AlvarMarkers &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Detector\+::detect (
+\begin{DoxyParamCaption}
+\item[{const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Markers \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetector_a791c31687afbd137621a546a921b952f}{}\label{classDetector_a791c31687afbd137621a546a921b952f}
+
+
+Detect markers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & markers message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+remove existing markers
+
+add new observed markers
+
+sort by the position
+
+calculate the euclidean distance of each marker
+
+sort so that the markers in the vector are closer than ones after it in index position \index{Detector@{Detector}!get\+Closest\+Marker@{get\+Closest\+Marker}}
+\index{get\+Closest\+Marker@{get\+Closest\+Marker}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{get\+Closest\+Marker()}{getClosestMarker()}}]{\setlength{\rightskip}{0pt plus 5cm}ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker Detector\+::get\+Closest\+Marker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetector_aaed77ff14ca621807e84f276bd388b58}{}\label{classDetector_aaed77ff14ca621807e84f276bd388b58}
+
+
+Get the marker closest to the robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the closest marker 
+\end{DoxyReturn}
+return the first marker (will be closest since the values are sorted) \index{Detector@{Detector}!is\+Marker\+Detected@{is\+Marker\+Detected}}
+\index{is\+Marker\+Detected@{is\+Marker\+Detected}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{is\+Marker\+Detected()}{isMarkerDetected()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Detector\+::is\+Marker\+Detected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetector_a7e42251ac89d61349dc82568d4f05256}{}\label{classDetector_a7e42251ac89d61349dc82568d4f05256}
+
+
+Check whether a marker has been detected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a marker is detected, false otherwise 
+\end{DoxyReturn}
+check if the markers list is empty \index{Detector@{Detector}!is\+Marker\+Id\+Valid@{is\+Marker\+Id\+Valid}}
+\index{is\+Marker\+Id\+Valid@{is\+Marker\+Id\+Valid}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{is\+Marker\+Id\+Valid(const std\+::string \&marker\+Id)}{isMarkerIdValid(const std::string &markerId)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Detector\+::is\+Marker\+Id\+Valid (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{marker\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetector_a47abbf054591d3b8213136892594cf7b}{}\label{classDetector_a47abbf054591d3b8213136892594cf7b}
+
+
+Check if a marker id is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em marker\+Id} & the marker id to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true is marker is valid, false otherwise 
+\end{DoxyReturn}
+check if the marker\+Id is found in the list of valid\+Marker\+Ids 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{detector_8hpp}{detector.\+hpp}\item 
+src/\hyperlink{detector_8cpp}{detector.\+cpp}\end{DoxyCompactItemize}

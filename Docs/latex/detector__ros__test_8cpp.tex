@@ -1,0 +1,136 @@
+\hypertarget{detector__ros__test_8cpp}{}\section{test/detector\+\_\+ros\+\_\+test.cpp File Reference}
+\label{detector__ros__test_8cpp}\index{test/detector\+\_\+ros\+\_\+test.\+cpp@{test/detector\+\_\+ros\+\_\+test.\+cpp}}
+
+
+Unit Test for \hyperlink{classDetectorRos}{Detector\+Ros} class.  
+
+
+{\ttfamily \#include \char`\"{}detector\+\_\+ros.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$ar\+\_\+track\+\_\+alvar\+\_\+msgs/\+Alvar\+Markers.\+h$>$}\\*
+{\ttfamily \#include $<$ar\+\_\+track\+\_\+alvar\+\_\+msgs/\+Alvar\+Marker.\+h$>$}\\*
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+Include dependency graph for detector\+\_\+ros\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{detector__ros__test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{detector__ros__test_8cpp_aad4b6204a848a52b8161439ce5b73769}{T\+E\+ST} (Detector\+Ros\+Test, test\+No\+Detected\+Markers)
+\begin{DoxyCompactList}\small\item\em Test that no markers are detected when a message is published that has no markers. \end{DoxyCompactList}\item 
+\hyperlink{detector__ros__test_8cpp_a780d4683628736d76be512db6ff54e73}{T\+E\+ST} (Detector\+Ros\+Test, test\+Detected\+Markers)
+\begin{DoxyCompactList}\small\item\em Test that markers are detected when a message is published that contains markers. \end{DoxyCompactList}\item 
+\hyperlink{detector__ros__test_8cpp_ac814cd2e6ba50998a1876207a5a118cd}{T\+E\+ST} (Detector\+Ros\+Test, test\+Is\+Closer\+Than)
+\begin{DoxyCompactList}\small\item\em Test that the detector returns the closest of multiple markers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unit Test for \hyperlink{classDetectorRos}{Detector\+Ros} class. 
+
+This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.\+0. If a copy of the M\+PL was not distributed with this file, You can obtain one at \href{https://mozilla.org/MPL/2.0/}{\tt https\+://mozilla.\+org/\+M\+P\+L/2.\+0/}.
+
+\begin{DoxyAuthor}{Author}
+Pablo Sanhueza, Ryan Cunningham, Andre Gomes 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{detector\+\_\+ros\+\_\+test.\+cpp@{detector\+\_\+ros\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!detector\+\_\+ros\+\_\+test.\+cpp@{detector\+\_\+ros\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Detector\+Ros\+Test, test\+No\+Detected\+Markers)}{TEST(DetectorRosTest, testNoDetectedMarkers)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Detector\+Ros\+Test}]{, }
+\item[{test\+No\+Detected\+Markers}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{detector__ros__test_8cpp_aad4b6204a848a52b8161439ce5b73769}{}\label{detector__ros__test_8cpp_aad4b6204a848a52b8161439ce5b73769}
+
+
+Test that no markers are detected when a message is published that has no markers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Detector\+Ros\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+No\+Detected\+Markers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+create a publisher to replicate the ar\+\_\+track\+\_\+alvar node
+
+create a message with no markers
+
+need to wait since there is a delay with ros in unit tests
+
+verify that no markers are detected \index{detector\+\_\+ros\+\_\+test.\+cpp@{detector\+\_\+ros\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!detector\+\_\+ros\+\_\+test.\+cpp@{detector\+\_\+ros\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Detector\+Ros\+Test, test\+Detected\+Markers)}{TEST(DetectorRosTest, testDetectedMarkers)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Detector\+Ros\+Test}]{, }
+\item[{test\+Detected\+Markers}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{detector__ros__test_8cpp_a780d4683628736d76be512db6ff54e73}{}\label{detector__ros__test_8cpp_a780d4683628736d76be512db6ff54e73}
+
+
+Test that markers are detected when a message is published that contains markers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Detector\+Ros\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+Detected\+Markers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+create a publisher to replicate the ar\+\_\+track\+\_\+alvar node
+
+create a message with a marker
+
+need to wait since there is a delay with ros in unit tests
+
+verify that the marker is detected \index{detector\+\_\+ros\+\_\+test.\+cpp@{detector\+\_\+ros\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!detector\+\_\+ros\+\_\+test.\+cpp@{detector\+\_\+ros\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Detector\+Ros\+Test, test\+Is\+Closer\+Than)}{TEST(DetectorRosTest, testIsCloserThan)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Detector\+Ros\+Test}]{, }
+\item[{test\+Is\+Closer\+Than}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{detector__ros__test_8cpp_ac814cd2e6ba50998a1876207a5a118cd}{}\label{detector__ros__test_8cpp_ac814cd2e6ba50998a1876207a5a118cd}
+
+
+Test that the detector returns the closest of multiple markers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Detector\+Ros\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+Is\+Closer\+Than} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+create a publisher to replicate the ar\+\_\+track\+\_\+alvar node
+
+create a message with two markers
+
+the first marker is further away from the robot
+
+the second marker is closer to the robot
+
+need to wait since there is a delay with ros in unit tests
+
+verify that the marker is detected
+
+verify that the correct marker is the closest 

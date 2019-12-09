@@ -1,0 +1,113 @@
+\hypertarget{classDetectorRos}{}\section{Detector\+Ros Class Reference}
+\label{classDetectorRos}\index{Detector\+Ros@{Detector\+Ros}}
+
+
+Detects AR tags.  
+
+
+
+
+{\ttfamily \#include $<$detector\+\_\+ros.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDetectorRos_a8d7a2111df2de062208588aa73055833}{Detector\+Ros} (const std\+::vector$<$ std\+::string $>$ \&valid\+Marker\+Ids)
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDetectorRos_af66d3c004ae2d7b80ded498bfc6af9bf}{detect} (const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Markers \&msg)
+\begin{DoxyCompactList}\small\item\em Detect markers. \end{DoxyCompactList}\item 
+bool \hyperlink{classDetectorRos_a2137ba7b1f091cafbd91aaf9aefbd4e6}{is\+Marker\+Detected} ()
+\begin{DoxyCompactList}\small\item\em Check whether a marker has been detected. \end{DoxyCompactList}\item 
+ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker \hyperlink{classDetectorRos_a67b4be8004b8b0f97e32bc806ca2a147}{get\+Closest\+Marker} ()
+\begin{DoxyCompactList}\small\item\em Get the marker closest to the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Detects AR tags. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Detector\+Ros@{Detector\+Ros}!Detector\+Ros@{Detector\+Ros}}
+\index{Detector\+Ros@{Detector\+Ros}!Detector\+Ros@{Detector\+Ros}}
+\subsubsection[{\texorpdfstring{Detector\+Ros(const std\+::vector$<$ std\+::string $>$ \&valid\+Marker\+Ids)}{DetectorRos(const std::vector< std::string > &validMarkerIds)}}]{\setlength{\rightskip}{0pt plus 5cm}Detector\+Ros\+::\+Detector\+Ros (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{valid\+Marker\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classDetectorRos_a8d7a2111df2de062208588aa73055833}{}\label{classDetectorRos_a8d7a2111df2de062208588aa73055833}
+
+
+Initialize \hyperlink{classDetector}{Detector} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valid\+Marker\+Ids} & valid marker ids to detect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+initialize the subscriber 
+
+\subsection{Member Function Documentation}
+\index{Detector\+Ros@{Detector\+Ros}!detect@{detect}}
+\index{detect@{detect}!Detector\+Ros@{Detector\+Ros}}
+\subsubsection[{\texorpdfstring{detect(const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Markers \&msg)}{detect(const ar_track_alvar_msgs::AlvarMarkers &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Detector\+Ros\+::detect (
+\begin{DoxyParamCaption}
+\item[{const ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Markers \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetectorRos_af66d3c004ae2d7b80ded498bfc6af9bf}{}\label{classDetectorRos_af66d3c004ae2d7b80ded498bfc6af9bf}
+
+
+Detect markers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & markers message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+call the detect method \index{Detector\+Ros@{Detector\+Ros}!get\+Closest\+Marker@{get\+Closest\+Marker}}
+\index{get\+Closest\+Marker@{get\+Closest\+Marker}!Detector\+Ros@{Detector\+Ros}}
+\subsubsection[{\texorpdfstring{get\+Closest\+Marker()}{getClosestMarker()}}]{\setlength{\rightskip}{0pt plus 5cm}ar\+\_\+track\+\_\+alvar\+\_\+msgs\+::\+Alvar\+Marker Detector\+Ros\+::get\+Closest\+Marker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetectorRos_a67b4be8004b8b0f97e32bc806ca2a147}{}\label{classDetectorRos_a67b4be8004b8b0f97e32bc806ca2a147}
+
+
+Get the marker closest to the robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the closest marker 
+\end{DoxyReturn}
+\index{Detector\+Ros@{Detector\+Ros}!is\+Marker\+Detected@{is\+Marker\+Detected}}
+\index{is\+Marker\+Detected@{is\+Marker\+Detected}!Detector\+Ros@{Detector\+Ros}}
+\subsubsection[{\texorpdfstring{is\+Marker\+Detected()}{isMarkerDetected()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Detector\+Ros\+::is\+Marker\+Detected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetectorRos_a2137ba7b1f091cafbd91aaf9aefbd4e6}{}\label{classDetectorRos_a2137ba7b1f091cafbd91aaf9aefbd4e6}
+
+
+Check whether a marker has been detected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a marker is detected, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{detector__ros_8hpp}{detector\+\_\+ros.\+hpp}\item 
+src/\hyperlink{detector__ros_8cpp}{detector\+\_\+ros.\+cpp}\end{DoxyCompactItemize}

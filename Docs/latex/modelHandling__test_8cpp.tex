@@ -1,0 +1,113 @@
+\hypertarget{modelHandling__test_8cpp}{}\section{test/model\+Handling\+\_\+test.cpp File Reference}
+\label{modelHandling__test_8cpp}\index{test/model\+Handling\+\_\+test.\+cpp@{test/model\+Handling\+\_\+test.\+cpp}}
+
+
+Tests for \hyperlink{classmodelHandling}{model\+Handling} class.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$gazebo\+\_\+msgs/\+Spawn\+Model.\+h$>$}\\*
+{\ttfamily \#include $<$gazebo\+\_\+msgs/\+Delete\+Model.\+h$>$}\\*
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$ros/package.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}model\+Handling.\+hpp\char`\"{}}\\*
+Include dependency graph for model\+Handling\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelHandling__test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{modelHandling__test_8cpp_a892a556f735170b263f59409a01a277b}{T\+E\+ST} (Model\+Handling\+Test, test\+Get\+Model)
+\begin{DoxyCompactList}\small\item\em Test get\+Model() method of \hyperlink{classmodelHandling}{model\+Handling} class. \end{DoxyCompactList}\item 
+\hyperlink{modelHandling__test_8cpp_a35c4923e81cd699c2b5eb189657add58}{T\+E\+ST} (Model\+Handling\+Test, test\+Get\+Delete\+Msg)
+\begin{DoxyCompactList}\small\item\em Test get\+Delete\+Msg() method of \hyperlink{classmodelHandling}{model\+Handling} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tests for \hyperlink{classmodelHandling}{model\+Handling} class. 
+
+/$\ast$ This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.\+0. If a copy of the M\+PL was not distributed with this file, You can obtain one at \href{https://mozilla.org/MPL/2.0/}{\tt https\+://mozilla.\+org/\+M\+P\+L/2.\+0/}.
+
+\begin{DoxyAuthor}{Author}
+Pablo Sanhueza, Ryan Cunningham, Andre Gomes 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+2019 Pablo Sanhueza, Ryan Cunningham, Andre Gomes 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{model\+Handling\+\_\+test.\+cpp@{model\+Handling\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!model\+Handling\+\_\+test.\+cpp@{model\+Handling\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Model\+Handling\+Test, test\+Get\+Model)}{TEST(ModelHandlingTest, testGetModel)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Model\+Handling\+Test}]{, }
+\item[{test\+Get\+Model}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{modelHandling__test_8cpp_a892a556f735170b263f59409a01a277b}{}\label{modelHandling__test_8cpp_a892a556f735170b263f59409a01a277b}
+
+
+Test get\+Model() method of \hyperlink{classmodelHandling}{model\+Handling} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Model\+Handling\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+Get\+Model} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Declase a gazebo\+\_\+msgs of type Spawn\+Model
+
+Retriving file
+
+Giving xml lines of file to model
+
+Setting info to test\+Model
+
+\hyperlink{classmodelHandling}{model\+Handling} object
+
+Calling get\+Model
+
+Making sure the request sets correct parameters \index{model\+Handling\+\_\+test.\+cpp@{model\+Handling\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!model\+Handling\+\_\+test.\+cpp@{model\+Handling\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Model\+Handling\+Test, test\+Get\+Delete\+Msg)}{TEST(ModelHandlingTest, testGetDeleteMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Model\+Handling\+Test}]{, }
+\item[{test\+Get\+Delete\+Msg}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{modelHandling__test_8cpp_a35c4923e81cd699c2b5eb189657add58}{}\label{modelHandling__test_8cpp_a35c4923e81cd699c2b5eb189657add58}
+
+
+Test get\+Delete\+Msg() method of \hyperlink{classmodelHandling}{model\+Handling} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Model\+Handling\+Test} & \\
+\hline
+\mbox{\tt in}  & {\em test\+Get\+Delete\+Msg} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Declaring Delete\+Model request and response for testing
+
+Setting info to test\+Model
+
+\hyperlink{classmodelHandling}{model\+Handling} object
+
+Call get\+Delete\+Msg, pair of response and request to delete a model
+
+Expect false because service call hasn\textquotesingle{}t been used 
