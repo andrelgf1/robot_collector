@@ -21,7 +21,7 @@ modelHandling::modelHandling() {
  * @brief Method returns msg with model info.
  */  
 gazebo_msgs::SpawnModel modelHandling::getModel(std::string path,
-  const std::string id, float xPos, float yPos, float zPos) {
+  const std::string &id, float xPos, float yPos, float zPos) {
   /// Name of model
   std::string tagID = "ar_block" + id;
 
@@ -46,7 +46,7 @@ gazebo_msgs::SpawnModel modelHandling::getModel(std::string path,
   model.request.initial_pose.position.y = yPos;
   model.request.initial_pose.position.z = zPos;
   model.request.reference_frame = "world";
-  
+
   return model;
 }
 
@@ -54,7 +54,7 @@ gazebo_msgs::SpawnModel modelHandling::getModel(std::string path,
  * @brief Method returns a pair of gazebo_msgs for deleting a model.
  */
 std::pair <gazebo_msgs::DeleteModelRequest, gazebo_msgs::DeleteModelResponse>
-  modelHandling::getDeleteMsg(const std::string id) {
+  modelHandling::getDeleteMsg(const std::string &id) {
   /// Name of model to be deleted
   std::string tagID = "ar_block" + id;
 
