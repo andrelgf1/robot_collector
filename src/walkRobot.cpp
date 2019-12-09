@@ -60,17 +60,15 @@ geometry_msgs::Twist walkRobot::robotWalk() {
     if (action == 0) {
       msg.linear.x = 1.0;
       msg.angular.z = 0;
-      std::cout << "linear " << action << " " << numberOfTimesPublished << "\n";
+
     } else if (action == 1) {
       msg.linear.x = 0;
       msg.angular.z = 0.5;
-      std::cout << "angular right " << action << " " << numberOfTimesPublished
-          << "\n";
+
     } else {
       msg.linear.x = 0;
       msg.angular.z = -0.5;
-      std::cout << "angular left " << action << " " << numberOfTimesPublished
-          << "\n";
+
     }
     // ROS_INFO_STREAM("Setting linear velocity");
     // ROS_INFO_STREAM("Number of obstacles avoided "<< robot.getAvoided());
