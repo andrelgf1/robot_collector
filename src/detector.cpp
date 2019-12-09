@@ -5,9 +5,7 @@
  *
  * @file detector.cpp
  * @brief Detects the closest AR tag.
- * @author Pablo Sanhueza
- * @author Ryan Cunningham
- * @author Andre Gomes
+ * @author Pablo Sanhueza, Ryan Cunningham, Andre Gomes
  * @copyright 2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham
  */
 
