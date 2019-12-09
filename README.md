@@ -6,12 +6,62 @@
 ---
 
 ## Overview
+The presence of shareable e-scooters has grown recently, leaving many city sidewalks littered with
+scooters that need to be recharged or have maintenance performed. While GPS can be used to track the scooters,
+there may be situations where location information is not available. For this cases,  this project developed a robot that can be used to search
+for and collect the scooters from unknown locations. To do this, the robot must be able to explore the
+environment the scooters are in, visually locate the scooters (using AR tags), and physically collect the scooters.
+This project was developed using the turtlebot robot which is going to randownly walk thru an desired area ,while searching for blocks with 
+AR tags which they represent the scooters.
+Once the block is found it must to simulate a collection.
+
+The developed  project funcionalities are :
+  - Place the robot blocks randomly in the simulated enviroment
+
+  - Radomly move the robot to the desired area.
+ 
+  - Avoid obstacles while looking for the scooters;
+
+  - Detect the blocks ;
+
+  - Move into a location where that block can be collected
+  
+  - Simulate the collection of the block by making it to vanish
+
+In order to properly locate the blocks with the AR tags we used the ar_track_alvar. This packages allows the generation of the AR tags  and 
+helps to tracking them by providing the position and orientation when detected by turtlebot.
+Once the desired object is detected the robot have to move to a location close to the block to collect, for this step we used move_base ROS
+package which generates a path to the goal location and publish the necessary velocities to reach it. 
+For the project implementation it was used pair programming which is an software development techinique where programmers work together in order
+program and  review each line of code.
+This techinique is mostly common withe 2 people, however added one more role:
+
+  - Driver is the one the writes the code.
+ 
+  - Navigator checks each line of code.
+
+  - Design keeper checks the correctness of  the program in a more high level manner.
+
+This software was developed using c++ programming language and the coverage is made with Google Test Framework where many tests were created to
+insure the quality of the program. 
+
+## Project Demonstration
+
+In this section it is possible to observe how the project behaves.
+Firstly we can see the robot moving randomly, them some brown boxes are added to the environment to become obstacles for the robot .
+Once the obstacle is detected the robot is going to turn until the sensor does not detect any obstacle ahead of it.
+Once it detect the desired block with the tag, it stops moving randomly and goes closer to the goal direction
+When the robot is from a desired distance from the block , it stops and perform the collection.
+
+![](results/robot_collector.gif)
+
+![](results/robot_collector_1.gif)
 
 
 
 ## Personnel
 
-Andre Gomes - Graduated in computer engineering at Uniceub in Brazil.
+Andre Gomes - Graduated in Computer engineering From Uniceub in Brazil in 2014. Currently coursing a M. Eng. in Robotics at UMD. Interested in Medical Robotics
 
 Ryan Cunningham - Works for Booz Allen Hamilton as a full-stack software engineer. Graduated with a Computer Science degree from UMBC in 2013.
 
@@ -48,67 +98,138 @@ https://docs.google.com/document/d/1ZHgUjypmwQ1EgH6OiEfFr33gEY65AFu5PCSwR1Sbxzo/
 
 https://docs.google.com/document/d/1que-h1hVN6aHw7FYaeQJNNPZvcynl0JTlDxtLWUCvBE/edit?usp=sharing
 
+## Review of Iteration 3 Plan
 
+https://docs.google.com/document/d/1JDRPVZ6Fz0qZt9qMtWo3nxsUWatqX6YXxdPUHDOhlSU/edit?usp=sharing
+
+## Presentation Slides
+https://docs.google.com/presentation/d/1tLeEdNl_gADovLV_jv89rZasCVSgMe8hM1ssqR-rIxQ/edit?usp=sharing
 
 
 
 
 ## Dependencies
 
-This repo is intended to be used on a device with Ubuntu 16.04 LTS. Additionally, you need to have ROS Kinetic Kame installed, which comes with Gazebo (we will also use this). Finally, you will also need the Turtlebot simulation stack. The list below are things that you will need to build and use this program.
 
-- Install ROS Kinetic. Make sure you follow all steps. Please follow link [here](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
-- Create a catkin Package. Catkin needs to be installed. Follow link [here](http://wiki.ros.org/catkin)
 
-- Install Turtlebot simulation stack. Follow commands shown below.
+### Install ROS kinetic
+
+In order to Install ROS kinect follow the following ROS.org [link](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+
+### Install catkin
+
+In order to Install catkin follow the following ROS.org [link](http://wiki.ros.org/catkin#Installing_catkin)
+
+### Install Turtlebot packages
 
 ```
-$ sudo apt-get install ros-kinetic-turtlebot-gazebo ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-rviz-launchers
-$ source /opt/ros/kinetic/setup.bash
+sudo apt-get install ros-kinetic-turtlebot-gazebo ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-rviz-launchers
+
 ```
+### Install ar_track_alvar 
 
+```
+sudo apt-get install ros-kinetic-ar-track-alvar
 
+```
+### Standard dependencies
+
+  - roscpp
+
+  - rospy 
+
+  - move_base_msgs
+
+  - gmapping slam packages
+
+  - std_msgs
+
+  - sensor_msgs
+
+  - geometry_msgs
+
+  - rostest
+
+  - rosbag
+
+  - tf
 
 ## Build Intructions
 
-To run this code you will need catkin. Also, you will need to have your catkin workspace set up. Follow commands below.
-
+Create and build a catkin workspace 
 ```
-$ cd ~/catkin_ws/
-$ source devel/setup.bash
-$ cd src/
-$ git clone -b https://github.com/sanhuezapablo/robot_collector.git
-$ cd ..
-$ catkin_make
+ mkdir -p ~/catkin_ws/src
+ cd ~/catkin_ws/
+ catkin_make
+ 
 ```
-
-If you do not have a catkin workspace set-up, please follow commands below. **Disregard if you already have catkin workspace.**
+Build Project in Catkin Workspace
 ```
-$ mkdir -p ~/catkin_ws/src
-$ cd ~/catkin_ws/
-$ catkin_make
-$ source devel/setup.bash
-$ cd src/
-$ git clone -b https://github.com/sanhuezapablo/robot_collector.git
-$ cd ..
-$ catkin_make
+ cd ~/catkin_ws/
+ source devel/setup.bash
+ cd src
+ git clone https://github.com/sanhuezapablo/robot_collector.git
+ cd ~/catkin_ws/
+ catkin_make
 ```
 
+## code coverage
 
-## Building for code coverage
+To visualize the code coverage locally  is necessary to have lcov package.
+If you do not have it , run the following command.
 
+```
+sudo apt-get install lcov
+
+```
+once you have the lcov package run the following command to check the code coverage of your files.
+
+```
+cd ~/catkin_ws/build
+lcov --directory . --capture --output-file coverage.info
+lcov --list coverage.info
+
+```
+If desired , it is possible to create a html file and save to in a  folder.
+
+```
+genhtml coverage.info --output-directory covout
+
+```
 
 ## How to run demo
+
+In order to Run the node, the map and the turtlebot at the same time the launch file can be used 
+
+There is no need to initialize the master.
+
+Inside catkin workspace
+
+```
+source devel/setup.bash
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:`rospack find robot_collector`/World/models
+roslaunch robot_collector robot_collector.launch
+
+```
 
 
 ## How to run tests
 
+```
+cd ~/catkin_ws/
+catkin_make run_tests robot_collector
+
+```
+
 
 ## Known Issues/Bugs
 
+1. The map recorded using gmapping did not exactly match the environment. This is likely due to errors in the Turtlebot localization while it was generating the map.
 
-### How to Generate Doxygen Documentation 
+2. The move_base package's obstacle detection during path planning sometimes resulted in errors where the planner is unable to find a possible solution. In this case, the robot tries to recover but is unable to.
+
+## How to Generate Doxygen Documentation 
 
 How to install Doxygen:
 
