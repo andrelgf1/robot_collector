@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.4">
-   <model name="ar_block">
+   <model name="ar_block2">
       <pose>0 0 0.1 0 0 0</pose>
       <static>true</static>
       <link name="link">
@@ -19,9 +19,9 @@
             </geometry>
             <material>
                <script>
-                  <uri>model://ar_block/materials/scripts</uri>
-                  <uri>model://ar_block/materials/textures/</uri>
-                  <name>ArBlock/Tag</name>
+                  <uri>model://ar_block2/materials/scripts</uri>
+                  <uri>model://ar_block2/materials/textures/</uri>
+                  <name>ArBlock2/Tag</name>
                </script>
             </material>
          </visual>
