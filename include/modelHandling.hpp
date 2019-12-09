@@ -42,7 +42,7 @@ class modelHandling {
    * @param zPos z position of model
    * @return gazebo_msgs::SpawnModel returns a message of type SpawnModel
    */  
-  gazebo_msgs::SpawnModel getModel(std::string path, const std::string id,
+  gazebo_msgs::SpawnModel getModel(std::string path, const std::string &id,
     float xPos, float yPos, float zPos);
 
   /**
@@ -51,7 +51,7 @@ class modelHandling {
    * @return std::pair <gazebo_msgs::DeleteModelRequest, gazebo_msgs::DeleteModelResponse> returns a pair of gazebo_msgs to delete model
    */  
   std::pair <gazebo_msgs::DeleteModelRequest, gazebo_msgs::DeleteModelResponse>
-    getDeleteMsg(const std::string id);
+    getDeleteMsg(const std::string &id);
 };
 
 #endif  // INCLUDE_MODELHANDLING_HPP_
