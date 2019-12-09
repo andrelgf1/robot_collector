@@ -14,7 +14,7 @@
 /**
  * @brief Constructor for modelHandlingRos
  */
-modelHandlingRos::modelHandlingRos(const std::string rosPackage):
+modelHandlingRos::modelHandlingRos(const std::string &rosPackage):
   rosPackage_(rosPackage) {
   /// Service from gazebo_ros to spawn sdf models
   spawnClient = n.serviceClient<gazebo_msgs::SpawnModel>
@@ -34,7 +34,7 @@ modelHandlingRos::modelHandlingRos(const std::string rosPackage):
 /**
  * @brief Adds models to Gazebo world
  */  
-void modelHandlingRos::addModels(const std::string id, float xPos, float yPos,
+void modelHandlingRos::addModels(const std::string &id, float xPos, float yPos,
 float zPos) {
   ROS_INFO_STREAM("ROSmodelHandling::addModels");
 
@@ -53,7 +53,7 @@ float zPos) {
 /**
  * @brief Removes models from Gazebo world
  */
-void modelHandlingRos::removeModels(const std::string id) {
+void modelHandlingRos::removeModels(const std::string &id) {
   if (!deleteClient.waitForExistence(ros::Duration(2.0))) {
     ROS_FATAL_STREAM("Unable to locate service '" <<
       spawnClient.getService() << "'");
@@ -111,7 +111,7 @@ void modelHandlingRos::randModels(std::vector<std::string> modelNames,
 /**
  * @brief Return the path of the model to be used
  */
-void modelHandlingRos::modelPath(std::string id) {
+void modelHandlingRos::modelPath(const std::string &id) {
   /// Name of model
   std::string tagID = "ar_block" + id;
 

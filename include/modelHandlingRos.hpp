@@ -111,7 +111,7 @@ class modelHandlingRos {
    * @param id Tag id as a string
    * @return none
    */  
-  void modelPath(std::string &id);
+  void modelPath(const std::string &id);
 
   /**
    * @brief Call back method for ModelStates Topic
